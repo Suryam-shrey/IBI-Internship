@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Futuristic Tech Design System for Blixora Labs */
+    
+    /* Core Background Colors */
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    
+    /* Card and Surface Colors */
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+    
+    /* Popover Colors */
+    --popover: 224 71% 4%;
+    --popover-foreground: 210 40% 98%;
+    
+    /* Primary - Electric Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 11%;
+    
+    /* Secondary - Dark Surface */
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    
+    /* Muted - Subtle Gray */
+    --muted: 215 20% 65%;
+    --muted-foreground: 217 33% 17%;
+    
+    /* Accent - Neon Purple */
+    --accent: 271 91% 65%;
+    --accent-foreground: 222 47% 11%;
+    
+    /* Success - Cyber Green */
+    --success: 142 70% 45%;
+    --success-foreground: 222 47% 11%;
+    
+    /* Warning - Electric Orange */
+    --warning: 25 95% 53%;
+    --warning-foreground: 222 47% 11%;
+    
+    /* Destructive - Red Alert */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    
+    /* Border & Input */
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 217 91% 60%;
+    
+    /* Border Radius */
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(271 91% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60% / 0.8), hsl(271 91% 65% / 0.8));
+    --gradient-card: linear-gradient(135deg, hsl(224 71% 4% / 0.5), hsl(217 33% 17% / 0.5));
+    --gradient-success: linear-gradient(135deg, hsl(142 70% 45%), hsl(217 91% 60%));
+    
+    /* Shadows & Effects */
+    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.5);
+    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --shadow-neon: 0 0 20px hsl(271 91% 65% / 0.6);
+    
+    /* Glass Effect */
+    --glass-bg: hsl(224 71% 4% / 0.7);
+    --glass-border: hsl(217 91% 60% / 0.2);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Sidebar */
+    --sidebar-background: 224 71% 4%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 271 91% 65%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark {
+    /* Dark mode is the default for this futuristic theme */
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
